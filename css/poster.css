@@ -1,0 +1,30 @@
+/* Poster Image Responsive */
+.poster {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+/* Responsive untuk layar kecil */
+@media (max-width: 576px) {
+    .poster {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Responsive untuk tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+    .poster {
+        max-width: 90%;
+    }
+}
+
+/* Responsive untuk layar besar */
+@media (min-width: 993px) {
+    .poster {
+        max-width: 80%;
+    }
+}

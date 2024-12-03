@@ -1,0 +1,672 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    background-color: #F5F0CD; /* Light yellow background */
+    color: #222; /* Dark text color for better readability */
+}
+
+/* Navbar */
+.navbar {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(135deg, #81BFDA, #FADA7A); /* Gradient from light blue to light golden */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.logo {
+    height: 3rem;
+}
+
+.navbar-brand {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #F5F0CD; /* Light yellow color */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem;
+}
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+a.nav-link {
+    color: #F5F0CD; /* Light yellow for nav links */
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+a.nav-link:hover {
+    color: #FADA7A; /* Highlight color on hover (light golden) */
+    text-shadow: 0px 0px 0.4vw rgba(255, 255, 255, 0.7);
+}
+
+/* Header Section */
+header {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Overlay untuk gambar */
+header .bg-img {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p3/63/2024/03/30/Screenshot-1289-810058975.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: grayscale(100%);
+    z-index: 1;
+    animation: fadeInOverlay 2s ease-out forwards; /* Animasi untuk gambar */
+}
+
+/* Overlay yang lebih gelap */
+header .bg-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+    z-index: 2;
+    animation: fadeInOverlay 2s ease-out forwards;
+}
+
+/* Gradien Overlay dengan animasi */
+header .bg-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(129, 191, 218, 0.4), rgba(250, 218, 122, 0.4)); /* Soft gradient */
+    z-index: 2;
+    animation: fadeInGradient 3s ease-out forwards; /* Animasi untuk gradien */
+}
+
+/* Animasi fadeIn untuk overlay */
+@keyframes fadeInOverlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi fadeIn untuk gradien */
+@keyframes fadeInGradient {
+    0% {
+        opacity: 0;
+        transform: scale(1.1); /* Memulai dengan ukuran sedikit lebih besar */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* Menyelesaikan dengan ukuran normal */
+    }
+}
+
+/* Animasi untuk teks header */
+header .title {
+    position: relative;
+    font-size: 4rem;
+    color: white;
+    z-index: 2;
+    padding: 0 1rem;
+    letter-spacing: 0.05em;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+header .description {
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    z-index: 2;
+    padding: 1rem 2rem;
+    max-width: 80%;
+    margin-top: 1rem;
+    line-height: 1.6;
+    animation: fadeInUp 2.5s ease-out forwards;
+}
+
+/* Keyframe untuk efek fadeInUp */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+header .bg-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header .title {
+    position: relative;
+    font-size: 4rem;
+    color: #F5F0CD; /* Light yellow title */
+    z-index: 2;
+    padding: 0 1rem;
+    letter-spacing: 0.05em;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+header .description {
+    position: relative;
+    font-size: 1.2rem;
+    color: #F5F0CD;
+    z-index: 2;
+    padding: 1rem 2rem;
+    max-width: 80%;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+
+/* Animation for fadeInUp effect */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Testimoni Section */
+#Testimoni {
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #FADA7A, #B1F0F7); /* Gradient from golden to light blue */
+    text-align: center;
+}
+
+#Testimoni .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.testimoni-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.testimoni-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease-in-out;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.testimoni-item p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.testimoni-item h4 {
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* FAQ Section */
+#FAQ {
+    padding: 4rem 1rem;
+    background-color: #F5F0CD;
+    text-align: center;
+}
+
+#FAQ .section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.faq-question {
+    background-color: #fff;
+    padding: 1.5rem;
+    text-align: left;
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #FADA7A; /* Light golden color on hover */
+}
+
+.faq-question[aria-expanded="true"] {
+    background-color: #F5F0CD; /* Light yellow color when expanded */
+}
+
+.faq-answer {
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    background-color: #F5F0CD;
+    display: none;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #81BFDA, #FADA7A); /* Gradient */
+    color: #333;
+    padding: 3rem 1rem;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 1rem;
+    color: #555;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    background-color: #222;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .footer-section ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Animasi untuk hidden dan show dengan efek blur dan pergeseran vertikal */
+.hidden {
+    opacity: 0;
+    transform: translateY(100px); /* Awal posisi di bawah dan tersembunyi */
+    filter: blur(10px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0); /* Pergerakan kembali ke posisi normal */
+    filter: blur(0);
+}
+
+/* Versi animasi hidden dan show dengan scaling */
+.hidden.scale {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9); /* Mula-mula lebih kecil dan sedikit bergeser */
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1); /* Animasi smooth */
+}
+
+.show.scale {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Muncul dengan ukuran penuh */
+}
+
+/* Animasi fade-in dari kiri */
+.hidden.fade-left {
+    opacity: 0;
+    transform: translateX(-80px); /* Mulai dari kiri */
+}
+
+.show.fade-left {
+    opacity: 1;
+    transform: translateX(0); /* Pergi ke posisi semula */
+}
+
+/* Animasi fade-in dari kanan */
+.hidden.fade-right {
+    opacity: 0;
+    transform: translateX(50px); /* Mulai dari kanan */
+}
+
+.show.fade-right {
+    opacity: 1;
+    transform: translateX(0); /* Pergi ke posisi semula */
+}
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    /* Navbar */
+    .navbar .container-fluid {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav {
+        display: block;
+        width: 100%;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.3rem;
+    }
+
+    /* Header */
+    header {
+        height: auto;
+        padding: 3rem 1rem;
+    }
+
+    header .title {
+        font-size: 2.5rem;
+    }
+
+    header .description {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    /* Highlights */
+    #Highlights .section-title {
+        font-size: 2rem;
+    }
+
+    .highlight-list li {
+        margin-bottom: 1.5rem;
+    }
+
+    .highlight-list h3 {
+        font-size: 1.5rem;
+    }
+
+    .highlight-list p {
+        font-size: 1rem;
+    }
+
+    /* Learn More Section */
+    #LearnMore .section-title {
+        font-size: 2rem;
+    }
+
+    .learn-item {
+        width: 100%;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .learn-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .learn-item p {
+        font-size: 1rem;
+    }
+
+    /* Testimoni Section */
+    #Testimoni .section-title {
+        font-size: 2rem;
+    }
+
+    .testimoni-item {
+        width: 100%;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimoni-item p {
+        font-size: 1rem;
+    }
+
+    .testimoni-item h4 {
+        font-size: 1.2rem;
+    }
+
+    /* FAQ Section */
+    #FAQ .section-title {
+        font-size: 2rem;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .footer-section ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsiveness for smaller screens like mobile (max-width 480px) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        height: 4rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.1rem;
+    }
+
+    header .title {
+        font-size: 2rem;
+    }
+
+    header .description {
+        font-size: 0.9rem;
+    }
+
+    #Highlights .section-title {
+        font-size: 1.8rem;
+    }
+
+    .learn-item {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .learn-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .testimoni-item {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255,255,255,0.95);
+        z-index: 1050;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar-collapse.show {
+        display: flex;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-item {
+        margin: 15px 0;
+    }
+
+    .navbar-brand {
+        position: relative;
+        z-index: 1060;
+    }
+
+    .navbar-toggler {
+        z-index: 1070;
+    }
+
+    .navbar-toggler[aria-expanded="true"] {
+        position: fixed;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}

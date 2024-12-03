@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="https://www.ignatiusglobal.sch.id/media_library/images/09666a0849a5cc9a158cf4077a779ea9.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/gallery.css">
+    <title>Galeri Kelompok 7 - P5</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Dokumentasi kegiatan Kelompok 7 dalam Program P5">
+    <meta name="keywords" content="Kelompok 7, P5, Dokumentasi, Kegiatan Sekolah">
+    <meta name="author" content="Kelompok 7">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary hidden fade-down">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="https://www.ignatiusglobal.sch.id/media_library/images/09666a0849a5cc9a158cf4077a779ea9.png" class="logo" alt="Logo Kelompok Tujuh">
+                Kelompok 7
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./poster.html">Poster</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./gallery.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about.html">Tentang Kami</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="gallery-section container py-5">
+        <div class="text-center mb-5 hidden fade-down">
+            <h1 class="display-4">Galeri Kegiatan Kelompok</h1>
+            <p class="lead text-muted">Dokumentasi momen-momen berkesan selama kegiatan P5</p>
+        </div>
+
+        <div class="gallery-filter mb-4 hidden fade-down">
+            <button class="btn btn-outline-primary active" data-filter="all">Semua</button>
+            <button class="btn btn-outline-primary" data-filter="kegiatan">Kegiatan</button>
+            <button class="btn btn-outline-primary" data-filter="diskusi">Diskusi</button>
+        </div>
+
+        <div class="row gallery-grid">
+            <div class="col-md-4 mb-4 gallery-item" data-category="kegiatan">
+                <div class="card gallery-card">
+                    <img src="./assets/2.jpeg" class="card-img-top" alt="Kegiatan Survei Lapangan" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Kegiatan Lapangan</h5>
+                        <p class="card-text">Dokumentasi kegiatan survei lapangan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 gallery-item" data-category="diskusi">
+                <div class="card gallery-card">
+                    <img src="./assets/1.jpeg" class="card-img-top" alt="Sesi Diskusi Kelompok" loading="lazy">
+                    <div class="card-body">
+                        <h5 class="card-title">Sesi Diskusi Kelompok</h5>
+                        <p class="card-text">Pembahasan strategi dan rencana proyek</p>
+                    </div>
+                </div>
+            </div>
+           
+          
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kelompok 7. Semua hak dilindungi.</p>
+    </footer>
+
+    <script src="./js/gallery.js"></script>
+    <script src="./js/edit.js"></script>
+</body>
+</html>
